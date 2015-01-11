@@ -192,6 +192,17 @@ void RAIO_init( void )
     RAIO_SetRegister( PWRR, 0x80 );
 }
 
+void RAIO_power_off( void )
+{
+    RAIO_SetRegister( PWRR, 0x00 );
+    RAIO_SetBacklightPWMValue( 0 );
+}
+
+void RAIO_power_on( void )
+{
+    RAIO_SetRegister( PWRR, 0x80 );
+    RAIO_SetBacklightPWMValue( 50 );
+}
 	
 
 // set coordinates for active window

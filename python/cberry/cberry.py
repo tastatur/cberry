@@ -1,7 +1,7 @@
 '''Wrapper for RAIO8870.h
 
 Generated with:
-./ctypesgen.py -lcberry /home/pi/SW/tft_test/RAIO8870.h /home/pi/SW/tft_test/tft.h /usr/local/include/bcm2835.h -o cberry.py
+/home/pi/ctypesgen-read-only/ctypesgen.py -lcberry ../../RAIO8870.h ../../tft.h /usr/local/include/bcm2835.h -o cberry.py
 
 Do not modify this file.
 '''
@@ -611,7 +611,7 @@ _libs["cberry"] = load_library("cberry")
 
 # No modules
 
-# /home/pi/SW/tft_test/RAIO8870.h: 277
+# /home/pi/lib/RAIO8870.h: 277
 class struct_anon_1(Structure):
     pass
 
@@ -624,7 +624,7 @@ struct_anon_1._fields_ = [
     ('high', c_ubyte),
 ]
 
-# /home/pi/SW/tft_test/RAIO8870.h: 274
+# /home/pi/lib/RAIO8870.h: 274
 class union_my_union(Union):
     pass
 
@@ -637,121 +637,133 @@ union_my_union._fields_ = [
     ('split', struct_anon_1),
 ]
 
-enum_DRAW_MODES = c_int # /home/pi/SW/tft_test/RAIO8870.h: 287
+enum_DRAW_MODES = c_int # /home/pi/lib/RAIO8870.h: 287
 
-CIRCLE_NONFILL = 0 # /home/pi/SW/tft_test/RAIO8870.h: 287
+CIRCLE_NONFILL = 0 # /home/pi/lib/RAIO8870.h: 287
 
-CIRCLE_FILL = (CIRCLE_NONFILL + 1) # /home/pi/SW/tft_test/RAIO8870.h: 287
+CIRCLE_FILL = (CIRCLE_NONFILL + 1) # /home/pi/lib/RAIO8870.h: 287
 
-SQUARE_NONFILL = (CIRCLE_FILL + 1) # /home/pi/SW/tft_test/RAIO8870.h: 287
+SQUARE_NONFILL = (CIRCLE_FILL + 1) # /home/pi/lib/RAIO8870.h: 287
 
-SQUARE_FILL = (SQUARE_NONFILL + 1) # /home/pi/SW/tft_test/RAIO8870.h: 287
+SQUARE_FILL = (SQUARE_NONFILL + 1) # /home/pi/lib/RAIO8870.h: 287
 
-LINE = (SQUARE_FILL + 1) # /home/pi/SW/tft_test/RAIO8870.h: 287
+LINE = (SQUARE_FILL + 1) # /home/pi/lib/RAIO8870.h: 287
 
-# /home/pi/SW/tft_test/RAIO8870.h: 292
+# /home/pi/lib/RAIO8870.h: 292
 if hasattr(_libs['cberry'], 'RAIO_init'):
     RAIO_init = _libs['cberry'].RAIO_init
     RAIO_init.argtypes = []
     RAIO_init.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 297
+# /home/pi/lib/RAIO8870.h: 295
+if hasattr(_libs['cberry'], 'RAIO_power_off'):
+    RAIO_power_off = _libs['cberry'].RAIO_power_off
+    RAIO_power_off.argtypes = []
+    RAIO_power_off.restype = None
+
+# /home/pi/lib/RAIO8870.h: 296
+if hasattr(_libs['cberry'], 'RAIO_power_on'):
+    RAIO_power_on = _libs['cberry'].RAIO_power_on
+    RAIO_power_on.argtypes = []
+    RAIO_power_on.restype = None
+
+# /home/pi/lib/RAIO8870.h: 300
 if hasattr(_libs['cberry'], 'RAIO_SetRegister'):
     RAIO_SetRegister = _libs['cberry'].RAIO_SetRegister
     RAIO_SetRegister.argtypes = [c_uint8, c_uint8]
     RAIO_SetRegister.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 302
+# /home/pi/lib/RAIO8870.h: 305
 if hasattr(_libs['cberry'], 'RAIO_SetBacklightPWMValue'):
     RAIO_SetBacklightPWMValue = _libs['cberry'].RAIO_SetBacklightPWMValue
     RAIO_SetBacklightPWMValue.argtypes = [c_uint8]
     RAIO_SetBacklightPWMValue.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 307
+# /home/pi/lib/RAIO8870.h: 310
 if hasattr(_libs['cberry'], 'Active_Window'):
     Active_Window = _libs['cberry'].Active_Window
     Active_Window.argtypes = [c_uint16, c_uint16, c_uint16, c_uint16]
     Active_Window.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 312
+# /home/pi/lib/RAIO8870.h: 315
 if hasattr(_libs['cberry'], 'BTE_mode'):
     BTE_mode = _libs['cberry'].BTE_mode
     BTE_mode.argtypes = [c_uint8, c_uint8]
     BTE_mode.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 317
+# /home/pi/lib/RAIO8870.h: 320
 if hasattr(_libs['cberry'], 'Text_Background_Color'):
     Text_Background_Color = _libs['cberry'].Text_Background_Color
     Text_Background_Color.argtypes = [c_uint8]
     Text_Background_Color.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 318
+# /home/pi/lib/RAIO8870.h: 321
 if hasattr(_libs['cberry'], 'Text_Foreground_Color'):
     Text_Foreground_Color = _libs['cberry'].Text_Foreground_Color
     Text_Foreground_Color.argtypes = [c_uint8]
     Text_Foreground_Color.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 323
+# /home/pi/lib/RAIO8870.h: 326
 if hasattr(_libs['cberry'], 'RAIO_clear_screen'):
     RAIO_clear_screen = _libs['cberry'].RAIO_clear_screen
     RAIO_clear_screen.argtypes = []
     RAIO_clear_screen.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 328
+# /home/pi/lib/RAIO8870.h: 331
 if hasattr(_libs['cberry'], 'Set_Geometric_Coordinate'):
     Set_Geometric_Coordinate = _libs['cberry'].Set_Geometric_Coordinate
     Set_Geometric_Coordinate.argtypes = [c_uint16, c_uint16, c_uint16, c_uint16]
     Set_Geometric_Coordinate.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 329
+# /home/pi/lib/RAIO8870.h: 332
 if hasattr(_libs['cberry'], 'Set_Geometric_Coordinate_circle'):
     Set_Geometric_Coordinate_circle = _libs['cberry'].Set_Geometric_Coordinate_circle
     Set_Geometric_Coordinate_circle.argtypes = [c_uint16, c_uint16, c_uint8]
     Set_Geometric_Coordinate_circle.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 334
+# /home/pi/lib/RAIO8870.h: 337
 if hasattr(_libs['cberry'], 'RAIO_set_cursor'):
     RAIO_set_cursor = _libs['cberry'].RAIO_set_cursor
     RAIO_set_cursor.argtypes = [c_uint16, c_uint16]
     RAIO_set_cursor.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 339
+# /home/pi/lib/RAIO8870.h: 342
 if hasattr(_libs['cberry'], 'RAIO_Write_Picture'):
     RAIO_Write_Picture = _libs['cberry'].RAIO_Write_Picture
     RAIO_Write_Picture.argtypes = [POINTER(c_uint16), c_uint32]
     RAIO_Write_Picture.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 344
+# /home/pi/lib/RAIO8870.h: 347
 if hasattr(_libs['cberry'], 'RAIO_StartDrawing'):
     RAIO_StartDrawing = _libs['cberry'].RAIO_StartDrawing
     RAIO_StartDrawing.argtypes = [c_int16]
     RAIO_StartDrawing.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 349
+# /home/pi/lib/RAIO8870.h: 352
 if hasattr(_libs['cberry'], 'Draw_Line'):
     Draw_Line = _libs['cberry'].Draw_Line
     Draw_Line.argtypes = [c_uint16, c_uint16, c_uint16, c_uint16]
     Draw_Line.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 350
+# /home/pi/lib/RAIO8870.h: 353
 if hasattr(_libs['cberry'], 'Draw_Square'):
     Draw_Square = _libs['cberry'].Draw_Square
     Draw_Square.argtypes = [c_uint16, c_uint16, c_uint16, c_uint16]
     Draw_Square.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 355
+# /home/pi/lib/RAIO8870.h: 358
 if hasattr(_libs['cberry'], 'RAIO_print_text'):
     RAIO_print_text = _libs['cberry'].RAIO_print_text
     RAIO_print_text.argtypes = [c_uint16, c_uint16, POINTER(c_ubyte), c_uint8, c_uint8]
     RAIO_print_text.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 360
+# /home/pi/lib/RAIO8870.h: 363
 if hasattr(_libs['cberry'], 'RAIO_SetFontSizeFactor'):
     RAIO_SetFontSizeFactor = _libs['cberry'].RAIO_SetFontSizeFactor
     RAIO_SetFontSizeFactor.argtypes = [c_uint8]
     RAIO_SetFontSizeFactor.restype = None
 
-# /home/pi/SW/tft_test/tft.h: 79
+# /home/pi/lib/tft.h: 79
 for _lib in _libs.values():
     try:
         number = (union_my_union).in_dll(_lib, 'number')
@@ -759,37 +771,37 @@ for _lib in _libs.values():
     except:
         pass
 
-# /home/pi/SW/tft_test/tft.h: 84
+# /home/pi/lib/tft.h: 84
 if hasattr(_libs['cberry'], 'TFT_init_board'):
     TFT_init_board = _libs['cberry'].TFT_init_board
     TFT_init_board.argtypes = []
     TFT_init_board.restype = None
 
-# /home/pi/SW/tft_test/tft.h: 89
+# /home/pi/lib/tft.h: 89
 if hasattr(_libs['cberry'], 'TFT_hard_reset'):
     TFT_hard_reset = _libs['cberry'].TFT_hard_reset
     TFT_hard_reset.argtypes = []
     TFT_hard_reset.restype = None
 
-# /home/pi/SW/tft_test/tft.h: 94
+# /home/pi/lib/tft.h: 94
 if hasattr(_libs['cberry'], 'TFT_wait_for_raio'):
     TFT_wait_for_raio = _libs['cberry'].TFT_wait_for_raio
     TFT_wait_for_raio.argtypes = []
     TFT_wait_for_raio.restype = None
 
-# /home/pi/SW/tft_test/tft.h: 99
+# /home/pi/lib/tft.h: 99
 if hasattr(_libs['cberry'], 'TFT_RegWrite'):
     TFT_RegWrite = _libs['cberry'].TFT_RegWrite
     TFT_RegWrite.argtypes = [c_uint16]
     TFT_RegWrite.restype = None
 
-# /home/pi/SW/tft_test/tft.h: 104
+# /home/pi/lib/tft.h: 104
 if hasattr(_libs['cberry'], 'TFT_DataWrite'):
     TFT_DataWrite = _libs['cberry'].TFT_DataWrite
     TFT_DataWrite.argtypes = [c_uint16]
     TFT_DataWrite.restype = None
 
-# /home/pi/SW/tft_test/tft.h: 109
+# /home/pi/lib/tft.h: 109
 if hasattr(_libs['cberry'], 'TFT_DataMultiWrite'):
     TFT_DataMultiWrite = _libs['cberry'].TFT_DataMultiWrite
     TFT_DataMultiWrite.argtypes = [POINTER(c_uint16), c_uint32]
@@ -1447,1093 +1459,1093 @@ if hasattr(_libs['cberry'], 'bcm2835_pwm_set_data'):
     bcm2835_pwm_set_data.argtypes = [c_uint8, c_uint32]
     bcm2835_pwm_set_data.restype = None
 
-# /home/pi/SW/tft_test/RAIO8870.h: 71
+# /home/pi/lib/RAIO8870.h: 71
 try:
     DISPLAY_WIDTH = 320
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 72
+# /home/pi/lib/RAIO8870.h: 72
 try:
     DISPLAY_HEIGHT = 240
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 73
+# /home/pi/lib/RAIO8870.h: 73
 try:
     PICTURE_PIXELS = (DISPLAY_WIDTH * DISPLAY_HEIGHT)
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 77
+# /home/pi/lib/RAIO8870.h: 77
 try:
     PCOD = 0
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 78
+# /home/pi/lib/RAIO8870.h: 78
 try:
     PWRR = 1
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 79
+# /home/pi/lib/RAIO8870.h: 79
 try:
     MRWC = 2
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 80
+# /home/pi/lib/RAIO8870.h: 80
 try:
     PCLK = 4
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 82
+# /home/pi/lib/RAIO8870.h: 82
 try:
     SYSR = 16
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 83
+# /home/pi/lib/RAIO8870.h: 83
 try:
     DRGB = 17
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 84
+# /home/pi/lib/RAIO8870.h: 84
 try:
     IOCR = 18
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 85
+# /home/pi/lib/RAIO8870.h: 85
 try:
     IODR = 19
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 87
+# /home/pi/lib/RAIO8870.h: 87
 try:
     HDWR = 20
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 88
+# /home/pi/lib/RAIO8870.h: 88
 try:
     HNDFTR = 21
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 89
+# /home/pi/lib/RAIO8870.h: 89
 try:
     HNDR = 22
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 90
+# /home/pi/lib/RAIO8870.h: 90
 try:
     HSTR = 23
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 91
+# /home/pi/lib/RAIO8870.h: 91
 try:
     HPWR = 24
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 93
+# /home/pi/lib/RAIO8870.h: 93
 try:
     VDHR0 = 25
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 94
+# /home/pi/lib/RAIO8870.h: 94
 try:
     VDHR1 = 26
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 95
+# /home/pi/lib/RAIO8870.h: 95
 try:
     VNDR0 = 27
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 96
+# /home/pi/lib/RAIO8870.h: 96
 try:
     VNDR1 = 28
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 97
+# /home/pi/lib/RAIO8870.h: 97
 try:
     VSTR0 = 29
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 98
+# /home/pi/lib/RAIO8870.h: 98
 try:
     VSTR1 = 30
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 99
+# /home/pi/lib/RAIO8870.h: 99
 try:
     VPWR = 31
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 101
+# /home/pi/lib/RAIO8870.h: 101
 try:
     DPCR = 32
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 102
+# /home/pi/lib/RAIO8870.h: 102
 try:
     FNCR0 = 33
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 103
+# /home/pi/lib/RAIO8870.h: 103
 try:
     FNCR1 = 34
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 104
+# /home/pi/lib/RAIO8870.h: 104
 try:
     CGSR = 35
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 105
+# /home/pi/lib/RAIO8870.h: 105
 try:
     HOFS0 = 36
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 106
+# /home/pi/lib/RAIO8870.h: 106
 try:
     HOFS1 = 37
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 107
+# /home/pi/lib/RAIO8870.h: 107
 try:
     VOFS0 = 38
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 108
+# /home/pi/lib/RAIO8870.h: 108
 try:
     VOFS1 = 39
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 109
+# /home/pi/lib/RAIO8870.h: 109
 try:
     ROMS = 40
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 111
+# /home/pi/lib/RAIO8870.h: 111
 try:
     FLDR = 41
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 113
+# /home/pi/lib/RAIO8870.h: 113
 try:
     HSAW0 = 48
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 114
+# /home/pi/lib/RAIO8870.h: 114
 try:
     HSAW1 = 49
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 115
+# /home/pi/lib/RAIO8870.h: 115
 try:
     VSAW0 = 50
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 116
+# /home/pi/lib/RAIO8870.h: 116
 try:
     VSAW1 = 51
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 117
+# /home/pi/lib/RAIO8870.h: 117
 try:
     HEAW0 = 52
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 118
+# /home/pi/lib/RAIO8870.h: 118
 try:
     HEAW1 = 53
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 119
+# /home/pi/lib/RAIO8870.h: 119
 try:
     VEAW0 = 54
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 120
+# /home/pi/lib/RAIO8870.h: 120
 try:
     VEAW1 = 55
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 121
+# /home/pi/lib/RAIO8870.h: 121
 try:
     HSSW0 = 56
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 122
+# /home/pi/lib/RAIO8870.h: 122
 try:
     HSSW1 = 57
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 123
+# /home/pi/lib/RAIO8870.h: 123
 try:
     VSSW0 = 58
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 124
+# /home/pi/lib/RAIO8870.h: 124
 try:
     VSSW1 = 59
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 125
+# /home/pi/lib/RAIO8870.h: 125
 try:
     HESW0 = 60
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 126
+# /home/pi/lib/RAIO8870.h: 126
 try:
     HESW1 = 61
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 127
+# /home/pi/lib/RAIO8870.h: 127
 try:
     VESW0 = 62
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 128
+# /home/pi/lib/RAIO8870.h: 128
 try:
     VESW1 = 63
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 130
+# /home/pi/lib/RAIO8870.h: 130
 try:
     MWCR0 = 64
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 131
+# /home/pi/lib/RAIO8870.h: 131
 try:
     MWCR1 = 65
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 132
+# /home/pi/lib/RAIO8870.h: 132
 try:
     TFCR = 66
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 133
+# /home/pi/lib/RAIO8870.h: 133
 try:
     TBCR = 67
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 134
+# /home/pi/lib/RAIO8870.h: 134
 try:
     BTCR = 68
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 135
+# /home/pi/lib/RAIO8870.h: 135
 try:
     CURS = 69
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 136
+# /home/pi/lib/RAIO8870.h: 136
 try:
     CURH0 = 70
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 137
+# /home/pi/lib/RAIO8870.h: 137
 try:
     CURH1 = 71
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 138
+# /home/pi/lib/RAIO8870.h: 138
 try:
     CURV0 = 72
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 139
+# /home/pi/lib/RAIO8870.h: 139
 try:
     CURV1 = 73
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 140
+# /home/pi/lib/RAIO8870.h: 140
 try:
     RCURH0 = 74
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 141
+# /home/pi/lib/RAIO8870.h: 141
 try:
     RCURH01 = 75
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 142
+# /home/pi/lib/RAIO8870.h: 142
 try:
     RCURV0 = 76
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 143
+# /home/pi/lib/RAIO8870.h: 143
 try:
     RCURV1 = 77
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 144
+# /home/pi/lib/RAIO8870.h: 144
 try:
     MRCD = 78
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 145
+# /home/pi/lib/RAIO8870.h: 145
 try:
     BECR0 = 80
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 146
+# /home/pi/lib/RAIO8870.h: 146
 try:
     BECR1 = 81
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 147
+# /home/pi/lib/RAIO8870.h: 147
 try:
     LTPR0 = 82
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 148
+# /home/pi/lib/RAIO8870.h: 148
 try:
     LTPR1 = 83
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 149
+# /home/pi/lib/RAIO8870.h: 149
 try:
     HSBE0 = 84
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 150
+# /home/pi/lib/RAIO8870.h: 150
 try:
     HSBE1 = 85
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 151
+# /home/pi/lib/RAIO8870.h: 151
 try:
     VSBE0 = 86
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 152
+# /home/pi/lib/RAIO8870.h: 152
 try:
     VSBE1 = 87
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 153
+# /home/pi/lib/RAIO8870.h: 153
 try:
     HDBE0 = 88
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 154
+# /home/pi/lib/RAIO8870.h: 154
 try:
     HDBE1 = 89
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 155
+# /home/pi/lib/RAIO8870.h: 155
 try:
     VDBE0 = 90
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 156
+# /home/pi/lib/RAIO8870.h: 156
 try:
     VDBE1 = 91
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 157
+# /home/pi/lib/RAIO8870.h: 157
 try:
     BEWR0 = 92
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 158
+# /home/pi/lib/RAIO8870.h: 158
 try:
     BEWR1 = 93
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 159
+# /home/pi/lib/RAIO8870.h: 159
 try:
     BEHR0 = 94
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 160
+# /home/pi/lib/RAIO8870.h: 160
 try:
     BEHR1 = 95
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 162
+# /home/pi/lib/RAIO8870.h: 162
 try:
     BGCR0 = 96
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 163
+# /home/pi/lib/RAIO8870.h: 163
 try:
     BGCR1 = 97
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 164
+# /home/pi/lib/RAIO8870.h: 164
 try:
     BGCR2 = 98
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 165
+# /home/pi/lib/RAIO8870.h: 165
 try:
     FGCR0 = 99
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 166
+# /home/pi/lib/RAIO8870.h: 166
 try:
     FGCR1 = 100
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 167
+# /home/pi/lib/RAIO8870.h: 167
 try:
     FGCR2 = 101
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 168
+# /home/pi/lib/RAIO8870.h: 168
 try:
     PTNO = 102
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 169
+# /home/pi/lib/RAIO8870.h: 169
 try:
     BGTR = 103
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 171
+# /home/pi/lib/RAIO8870.h: 171
 try:
     TPCR0 = 112
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 172
+# /home/pi/lib/RAIO8870.h: 172
 try:
     TPCR1 = 113
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 173
+# /home/pi/lib/RAIO8870.h: 173
 try:
     TPXH = 114
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 174
+# /home/pi/lib/RAIO8870.h: 174
 try:
     TPYH = 115
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 175
+# /home/pi/lib/RAIO8870.h: 175
 try:
     TPXYL = 116
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 177
+# /home/pi/lib/RAIO8870.h: 177
 try:
     GCHP0 = 128
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 178
+# /home/pi/lib/RAIO8870.h: 178
 try:
     GCHP1 = 129
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 179
+# /home/pi/lib/RAIO8870.h: 179
 try:
     GCVP0 = 130
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 180
+# /home/pi/lib/RAIO8870.h: 180
 try:
     GCVP1 = 131
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 181
+# /home/pi/lib/RAIO8870.h: 181
 try:
     GCC0 = 132
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 182
+# /home/pi/lib/RAIO8870.h: 182
 try:
     GCC1 = 133
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 184
+# /home/pi/lib/RAIO8870.h: 184
 try:
     PLLC1 = 136
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 185
+# /home/pi/lib/RAIO8870.h: 185
 try:
     PLLC2 = 137
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 187
+# /home/pi/lib/RAIO8870.h: 187
 try:
     P1CR = 138
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 188
+# /home/pi/lib/RAIO8870.h: 188
 try:
     P1DCR = 139
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 189
+# /home/pi/lib/RAIO8870.h: 189
 try:
     P2CR = 140
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 190
+# /home/pi/lib/RAIO8870.h: 190
 try:
     P2DCR = 141
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 191
+# /home/pi/lib/RAIO8870.h: 191
 try:
     MCLR = 142
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 192
+# /home/pi/lib/RAIO8870.h: 192
 try:
     INTC = 143
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 194
+# /home/pi/lib/RAIO8870.h: 194
 try:
     DCR = 144
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 195
+# /home/pi/lib/RAIO8870.h: 195
 try:
     DLHSR0 = 145
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 196
+# /home/pi/lib/RAIO8870.h: 196
 try:
     DLHSR1 = 146
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 197
+# /home/pi/lib/RAIO8870.h: 197
 try:
     DLVSR0 = 147
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 198
+# /home/pi/lib/RAIO8870.h: 198
 try:
     DLVSR1 = 148
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 199
+# /home/pi/lib/RAIO8870.h: 199
 try:
     DLHER0 = 149
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 200
+# /home/pi/lib/RAIO8870.h: 200
 try:
     DLHER1 = 150
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 201
+# /home/pi/lib/RAIO8870.h: 201
 try:
     DLVER0 = 151
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 202
+# /home/pi/lib/RAIO8870.h: 202
 try:
     DLVER1 = 152
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 203
+# /home/pi/lib/RAIO8870.h: 203
 try:
     DCHR0 = 153
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 204
+# /home/pi/lib/RAIO8870.h: 204
 try:
     DCHR1 = 154
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 205
+# /home/pi/lib/RAIO8870.h: 205
 try:
     DCVR0 = 155
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 206
+# /home/pi/lib/RAIO8870.h: 206
 try:
     DCVR1 = 156
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 207
+# /home/pi/lib/RAIO8870.h: 207
 try:
     DCRR = 157
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 209
+# /home/pi/lib/RAIO8870.h: 209
 try:
     TCR1 = 160
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 210
+# /home/pi/lib/RAIO8870.h: 210
 try:
     TCR2 = 161
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 211
+# /home/pi/lib/RAIO8870.h: 211
 try:
     OEHTCR1 = 162
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 212
+# /home/pi/lib/RAIO8870.h: 212
 try:
     OEHTCR2 = 163
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 213
+# /home/pi/lib/RAIO8870.h: 213
 try:
     OEHTCR3 = 164
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 214
+# /home/pi/lib/RAIO8870.h: 214
 try:
     OEHTCR4 = 165
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 215
+# /home/pi/lib/RAIO8870.h: 215
 try:
     OEHTCR5 = 166
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 216
+# /home/pi/lib/RAIO8870.h: 216
 try:
     OEHTCR6 = 167
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 217
+# /home/pi/lib/RAIO8870.h: 217
 try:
     OEHTCR7 = 168
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 218
+# /home/pi/lib/RAIO8870.h: 218
 try:
     OEHTCR8 = 169
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 220
+# /home/pi/lib/RAIO8870.h: 220
 try:
     STHTCR1 = 170
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 221
+# /home/pi/lib/RAIO8870.h: 221
 try:
     STHTCR2 = 171
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 222
+# /home/pi/lib/RAIO8870.h: 222
 try:
     STHTCR3 = 172
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 223
+# /home/pi/lib/RAIO8870.h: 223
 try:
     STHTCR4 = 173
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 225
+# /home/pi/lib/RAIO8870.h: 225
 try:
     Q1HCR1 = 174
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 226
+# /home/pi/lib/RAIO8870.h: 226
 try:
     Q1HCR2 = 175
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 228
+# /home/pi/lib/RAIO8870.h: 228
 try:
     OEVTCR1 = 176
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 229
+# /home/pi/lib/RAIO8870.h: 229
 try:
     OEVTCR2 = 177
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 230
+# /home/pi/lib/RAIO8870.h: 230
 try:
     OEVTCR3 = 178
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 231
+# /home/pi/lib/RAIO8870.h: 231
 try:
     OEVTCR4 = 179
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 232
+# /home/pi/lib/RAIO8870.h: 232
 try:
     CKVTCR1 = 180
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 233
+# /home/pi/lib/RAIO8870.h: 233
 try:
     CKVTCR2 = 181
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 234
+# /home/pi/lib/RAIO8870.h: 234
 try:
     CKVTCR3 = 182
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 235
+# /home/pi/lib/RAIO8870.h: 235
 try:
     CKVTCR4 = 183
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 236
+# /home/pi/lib/RAIO8870.h: 236
 try:
     STVTCR1 = 184
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 237
+# /home/pi/lib/RAIO8870.h: 237
 try:
     STVTCR2 = 185
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 238
+# /home/pi/lib/RAIO8870.h: 238
 try:
     STVTCR3 = 186
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 239
+# /home/pi/lib/RAIO8870.h: 239
 try:
     STVTCR4 = 187
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 240
+# /home/pi/lib/RAIO8870.h: 240
 try:
     STVTCR5 = 188
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 241
+# /home/pi/lib/RAIO8870.h: 241
 try:
     STVTCR6 = 189
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 242
+# /home/pi/lib/RAIO8870.h: 242
 try:
     STVTCR7 = 190
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 243
+# /home/pi/lib/RAIO8870.h: 243
 try:
     STVTCR8 = 191
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 245
+# /home/pi/lib/RAIO8870.h: 245
 try:
     COMTCR1 = 192
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 246
+# /home/pi/lib/RAIO8870.h: 246
 try:
     COMTCR2 = 193
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 247
+# /home/pi/lib/RAIO8870.h: 247
 try:
     RGBTCR1 = 194
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 248
+# /home/pi/lib/RAIO8870.h: 248
 try:
     RGBTCR2 = 195
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 252
+# /home/pi/lib/RAIO8870.h: 252
 try:
     COLOR_RED = 224
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 253
+# /home/pi/lib/RAIO8870.h: 253
 try:
     COLOR_BLUE = 3
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 254
+# /home/pi/lib/RAIO8870.h: 254
 try:
     COLOR_GREEN = 28
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 255
+# /home/pi/lib/RAIO8870.h: 255
 try:
     COLOR_BLACK = 0
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 256
+# /home/pi/lib/RAIO8870.h: 256
 try:
     COLOR_WHITE = 255
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 257
+# /home/pi/lib/RAIO8870.h: 257
 try:
     COLOR_CYAN = 31
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 258
+# /home/pi/lib/RAIO8870.h: 258
 try:
     COLOR_YELLOW = 252
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 259
+# /home/pi/lib/RAIO8870.h: 259
 try:
     COLOR_MAGENTA = 227
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 260
+# /home/pi/lib/RAIO8870.h: 260
 try:
     COLOR_DARK_GREEN = 12
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 264
+# /home/pi/lib/RAIO8870.h: 264
 try:
     ROP_SOURCE = 12
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 268
+# /home/pi/lib/RAIO8870.h: 268
 try:
     BTE_MOVE_POSITIVE = 2
 except:
     pass
 
-# /home/pi/SW/tft_test/RAIO8870.h: 269
+# /home/pi/lib/RAIO8870.h: 269
 try:
     BTE_SOLID_FILL = 12
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 61
+# /home/pi/lib/tft.h: 61
 try:
     MOSI = RPI_V2_GPIO_P1_19
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 62
+# /home/pi/lib/tft.h: 62
 try:
     MISO = RPI_V2_GPIO_P1_21
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 63
+# /home/pi/lib/tft.h: 63
 try:
     SCLK = RPI_V2_GPIO_P1_23
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 64
+# /home/pi/lib/tft.h: 64
 try:
     OE = RPI_V2_GPIO_P1_11
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 65
+# /home/pi/lib/tft.h: 65
 try:
     SPI_CE1 = RPI_V2_GPIO_P1_26
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 66
+# /home/pi/lib/tft.h: 66
 try:
     RAIO_RS = RPI_V2_GPIO_P1_12
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 67
+# /home/pi/lib/tft.h: 67
 try:
     RAIO_RST = RPI_V2_GPIO_P1_22
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 68
+# /home/pi/lib/tft.h: 68
 try:
     RAIO_CS = RPI_V2_GPIO_P1_24
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 69
+# /home/pi/lib/tft.h: 69
 try:
     RAIO_WR = RPI_V2_GPIO_P1_18
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 70
+# /home/pi/lib/tft.h: 70
 try:
     RAIO_RD = RPI_V2_GPIO_P1_16
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 71
+# /home/pi/lib/tft.h: 71
 try:
     RAIO_WAIT = RPI_V2_GPIO_P1_15
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 72
+# /home/pi/lib/tft.h: 72
 try:
     RAIO_INT = RPI_V2_GPIO_P1_13
 except:
     pass
 
-# /home/pi/SW/tft_test/tft.h: 74
+# /home/pi/lib/tft.h: 74
 try:
     RAIO_WRpin = 24
 except:
@@ -3417,7 +3429,7 @@ def delay(x):
 def delayMicroseconds(x):
     return (bcm2835_delayMicroseconds (x))
 
-my_union = union_my_union # /home/pi/SW/tft_test/RAIO8870.h: 274
+my_union = union_my_union # /home/pi/lib/RAIO8870.h: 274
 
 # No inserted files
 

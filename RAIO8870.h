@@ -291,6 +291,9 @@ enum DRAW_MODES { CIRCLE_NONFILL, CIRCLE_FILL, SQUARE_NONFILL, SQUARE_FILL, LINE
 // ----------------------------------------------------------
 void RAIO_init( void );
 
+// Turn display on and off
+void RAIO_power_off( void );
+void RAIO_power_on( void );
 
 // write command to a register
 // ----------------------------------------------------------
